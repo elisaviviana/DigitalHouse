@@ -1,0 +1,41 @@
+/* Style Resets */
+*{
+  box-sizing: border-box;
+}
+ul, ol{
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+
+}
+
+/* Moblie */
+body {
+  text-align: center;
+
+}
+h2{
+  padding-top: 20px;
+}
+.fondoverde{
+    background-color: #18BC9C;
+      color: white;
+}
+.fondoazul{
+  background-color: #2C3E50;
+    color: white;
+}
+.foto{
+  padding: 10px;
+}
+.portfolio{
+  overflow: hidden;
+}
+.marginbotton-10{
+  margin-bottom:  10px;
+
+}
