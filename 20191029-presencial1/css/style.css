@@ -1,0 +1,176 @@
+/* Style Resets */
+*{
+  box-sizing: border-box;
+}
+ul, ol{
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Moblie */
+body {
+    margin:0;
+    padding: 0;
+    background-image: url("../images/bg-body.png");
+    font-family: sans-serif;
+}
+.container{
+    margin: 0 auto; /* importante: centramos estructura */
+    max-width: 420px;
+}
+.main-header{
+    margin-top: 15px;
+    text-align: center; /* importante: centramos contenido */
+}
+.logo{
+    border-radius: 90px;
+    border: 2px solid #ccc;
+    display: block; /* centrado */
+    margin: auto; /* centrado */
+}
+/* COMPLETAR AQUÍ LOS ESTILOS MOBILE QUE FALTAN */
+.main-nav ul li{
+  background-color: grey;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+
+}
+.banner{
+  display: none;
+}
+.product{
+  margin-top:  15px;
+
+}
+.photo-container{
+  position: relative;
+}
+.photo{
+  width: 100%;
+}
+
+.special{
+  position: absolute;
+  top:0px;
+  right: 5px;
+}
+.zoom{
+  position: absolute;
+  top:50%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  text-align: center;
+}
+.more{
+  background-color: grey;
+  padding: 10px;
+
+}
+.main-footer ul li{
+  text-align: center;
+  background-color: grey;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+/* Tablets - Laptops */
+@media (min-width:768px) {
+    .container{
+      max-width: 720px; /* Breakpoint para esta resolución */
+    }
+    /* Para esta resolución se heredan los estilos Mobile a no ser que especifiquemos más estilos aquí */
+    .banner{
+      display: block;
+
+  }
+  .banner img{
+    width: 100%;
+  }
+    .main-nav ul{
+      overflow: hidden;
+    }
+    .main-nav ul li{
+      float: left;
+      width: 15.2%;
+      padding: 10px;
+      margin: 5.1px;
+    }
+    .main-nav ul li a{
+      display: block;
+    }
+    .vip-products{
+      overflow: hidden;
+    }
+    .product{
+      float: left;
+      width: 45%;
+      margin: 15px;
+    }
+
+
+}
+
+/* Large Screens */
+@media (min-width:1200px){
+    .container{
+      max-width:1180px; /* Breakpoint para esta resolución */
+    }
+    /* Para esta resolución se heredan los estilos Tablets y Laptops a no ser que especifiquemos más estilos aquí */
+    .banner{
+      display: block;
+    }
+    .banner img{
+      width: 100%;
+    }
+    .vip-products{
+      overflow: hidden;
+    }
+    .product{
+      float: left;
+      width: 30%;
+      margin: 18px;
+    }
+    .main-footer{
+      background-color: red;
+      height: 15vh;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 20px;
+      /* text-align: center; */
+
+    }
+    .main-footer ul{
+      overflow: hidden;
+      /* width: 100%; */
+
+      margin-left: 30%;
+
+    }
+    .main-footer ul li{
+      float: left;
+      /* width: 15.2%; */
+      padding: 10px;
+      border-left: solid 1px;
+      line-height: 10px; /* barra de separación */
+      background-color: red;
+
+    }
+    .main-footer ul li:first-child{
+      border-left: none;
+    }
+    .main-footer ul li a{
+      display: block;
+      text-transform: capitalize;
+    }
+}

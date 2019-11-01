@@ -1,0 +1,114 @@
+body{
+		background-image: url("../images/bg-body.png"); 
+}
+.container{	
+	width: 960px;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+
+
+}
+.main-header{
+	width: 100%;
+	height: 25vh;
+
+}
+.logo{
+	display: block;
+	margin: auto;
+}
+.toggle-nav{
+
+}
+.main-nav ul{
+list-style-type: none;
+overflow: hidden;
+}
+.main-nav ul li{
+	float: left;
+	width: 10%;
+	background-color: grey;
+	color: white;
+	padding: 10px;
+
+}
+.main-nav ul li a{
+	display: block;
+}
+
+.banner{
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 10vh;
+
+}
+.vip-products{
+overflow: hidden;
+	width: 100%;
+	height: 45vh;
+
+}
+.product{
+
+	float: left;
+
+}
+.photo-container{
+	position: relative;
+	width: 50%;
+	box-sizing: border-box;
+	
+}
+.photo{
+	width: 100%;
+	box-sizing: border-box;
+	
+
+}
+.special{
+	position: absolute;
+	top: 0px;
+	right: 50px;
+	box-sizing: border-box;
+
+}
+.zoom{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	background-color: rgba(224,244,244,0.5);
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+}
+.more{
+	width: 10px;
+	height: 10px;
+	color: white;
+	background-color: grey;
+
+}
+.main-footer{
+	width: 100%;
+	height: 10vh;
+}
+.main-footer ul{
+	list-style-type: none;
+	overflow: hidden;
+}
+.main-footer ul li{
+	float: left;
+	width: 10%;
+	margin: 0 auto;
+}
+.main-footer ul li a{
+	display: block;
+	text-decoration: none;
+}
+
+
+@media (min-width: 460) and (min-width: ) {
+	
+}

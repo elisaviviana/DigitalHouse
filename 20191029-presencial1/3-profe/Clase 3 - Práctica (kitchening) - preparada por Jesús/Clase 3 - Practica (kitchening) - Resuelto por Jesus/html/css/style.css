@@ -1,0 +1,203 @@
+/* Style Resets */
+*{
+  box-sizing: border-box;
+}
+ul, ol{
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* Moblie */
+body {
+    margin:0;
+    padding: 0;
+    background-image: url("../images/bg-body.png");
+    font-family: sans-serif;
+}
+.container{
+    margin: 0 auto; /* importante: centramos estructura */
+    max-width: 420px;
+}
+.main-header{
+    margin-top: 15px;
+    text-align: center; /* importante: centramos contenido */
+}
+.logo{
+    border-radius: 90px;
+    border: 2px solid #ccc;
+    display: block; /* centrado */
+    margin: auto; /* centrado */
+}
+.toggle-nav{
+    display: inline-block;
+    width: 100%;
+    margin-top:20px;
+    color:black;
+ }
+.main-nav ul li {
+    background-color: #444444;
+    margin: 2px;
+    padding: 7px;
+    text-transform: uppercase;
+    color: white;
+}
+.main-nav ul li a {
+    color: white;
+}
+.banner{
+  display: none;
+}
+.vip-products{
+    margin-bottom: 30px;
+}
+.product{
+    margin-bottom: 30px;
+}
+.photo-container{
+    position: relative;
+}
+.photo{
+    width: 100%;
+}
+.special{
+    top: 0px;
+    right: 10px;
+    position: absolute;
+}
+.zoom{
+    width: 100%;
+    top: 50%;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+.product p{
+    color: #666666;
+}
+.product h2{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.more{
+    background-color: #444444;
+    margin: 2px;
+    padding: 8px 10px;;
+    color: white;
+    font-size: 0.8em;
+}
+.main-footer{
+    margin-top: 15px;
+    text-align: center; /* importante: centramos contenido */
+}
+.main-footer li {
+    background-color: #444444;
+    margin: 2px;
+    padding: 7px;
+    text-transform: uppercase;
+    color: white;
+}
+.main-footer a {
+    color: white;
+}
+
+
+
+
+/* Tablets - Laptops */
+@media (min-width:768px) {
+    .container{
+      max-width: 720px; /* breakpoint para esta resolución */
+    }
+    .toggle-nav{
+        display: none; /* ocultamos ícono de menú */
+     }
+     .main-nav ul li {
+        display:inline-block;
+        font-size: 0.8em;
+        padding: 7px 0px;
+        width: 16%; /* si 16% por 6 ítems es 96% (de 720px) entonces me queda un 4% de separación entre ítems*/
+        margin:0;
+     }
+     .main-nav li:last-child{
+       margin-right: 0;
+     }
+     .banner{
+         display: block; /* mostramos el banner */
+     }
+     .banner img {
+        width: 100%;
+     }
+     .vip-products{
+         margin-top: 20px;
+         overflow: hidden;
+     }
+     .product{
+         width: 49%;
+         margin-right: 2%;
+         float: left;
+     }
+     .product:nth-child(even){ /* solo afecta a los productos pares */
+       margin-right: 0;
+     }
+}
+
+/* Large Screens */
+@media (min-width:1200px){
+    .container{
+      max-width:1180px; /* breakpoint para esta resolución */
+    }
+     .main-nav ul li {
+        width: 16.27%; /* distribuímos el menu para que ocupe todo el width*/
+     }
+     .product{
+         width: 32%;
+         margin-right: 2%;
+         float: left;
+     }
+     .product:nth-child(even){ /* afecta a los productos pares de c/fila*/
+         margin-right: 2%;
+     }
+     .product:nth-child(3n){ /* solo afecta al último de cada fila */
+       margin-right: 0;
+     }
+     .main-footer{
+         border-top-left-radius: 30px;
+         border-top-right-radius: 30px;
+         background-color: #C80000;
+         width: 100%;
+         padding-top: 15px;
+         padding-bottom: 20px;
+     }
+     .main-footer ul{
+         text-align: center; /* importante: centramos contenido */
+     }
+     .main-footer li {
+         border-left: white 1px solid; /* barra de separación */
+         line-height: 10px; /* barra de separación */
+         margin: 0;
+         padding: 0;
+         padding-top: 2px;
+         padding-bottom: 5px;
+         padding-left: 10px;
+         padding-right: 8px;
+         color: white;
+         display: inline-block;
+         background-color: transparent;
+     }
+     .main-footer li:first-child{
+       border-left: none;
+     }
+     .main-footer a{
+       text-transform: capitalize;
+       color: white;
+       font-size: 0.7em;
+     }
+}

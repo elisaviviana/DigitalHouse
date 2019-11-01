@@ -1,0 +1,55 @@
+/* Style Resets */
+*{
+  box-sizing: border-box;
+}
+ul, ol{
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* Moblie */
+body {
+    margin:0;
+    padding: 0;
+    background-image: url("../images/bg-body.png");
+    font-family: sans-serif;
+}
+.container{
+    margin: 0 auto; /* importante: centramos estructura */
+    max-width: 420px;
+}
+.main-header{
+    margin-top: 15px;
+    text-align: center; /* importante: centramos contenido */
+}
+.logo{
+    border-radius: 90px;
+    border: 2px solid #ccc;
+    display: block; /* centrado */
+    margin: auto; /* centrado */
+}
+/* COMPLETAR AQUÍ LOS ESTILOS MOBILE QUE FALTAN */
+
+
+
+
+/* Tablets - Laptops */
+@media (min-width:768px) {
+    .container{
+      max-width: 720px; /* Breakpoint para esta resolución */
+    }
+    /* Para esta resolución se heredan los estilos Mobile a no ser que especifiquemos más estilos aquí */
+}
+
+/* Large Screens */
+@media (min-width:1200px){
+    .container{
+      max-width:1180px; /* Breakpoint para esta resolución */
+    }
+    /* Para esta resolución se heredan los estilos Tablets y Laptops a no ser que especifiquemos más estilos aquí */
+}
