@@ -1,0 +1,16 @@
+
+.primero {
+	background-color: red;
+	width: 100%;
+	height: 20vh;
+}
+.segundo {
+	background-color: blue;
+	width: 100%;
+	height: 70vh;
+}
+.tercero {
+	background-color: yellow;
+	width: 100%;
+	height: 10vh;
+}

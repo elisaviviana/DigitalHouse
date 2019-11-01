@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+  </head>
+  <body>
+<form action="resultado.html" method="POST">
+  
+    <p><label for="nombre">Nombre:</label><input type="text" name="nombre" id="nombre" required="true"></p>
+    <p><label for="email">Email:</label><input type="email" name="email" id="email" required="true"></p>
+    <p><label for="password">Password:</label><input type="password" name="password" id="password" required="true"></p>
+    <input type="submit" name="Enviar">
+  
+</form>
+<br>
+<form>
+  <label for="mascota">Tenes mascotas?</label>
+  <br>
+  <input type="radio" name="mascota" value="si">Si
+  <br>
+  <input type="radio" name="mascota" valude="no">No
+    <input type="submit" name="Enviar">
+</form>
+<br>
+<form>
+  <label for="hobby">¿Cuáles son tus hobbies?</label>
+  <br>
+  <input type="checkbox"" name="hobby" value="Pescar">Pescar
+  <br>
+  <input type="checkbox"" name="hobby" valude="Correr">Correr 
+  <br>
+  <input type="checkbox"" name="hobby" valude="Yoga">Yoga
+  <br>
+      <input type="submit" name="Enviar">
+</form>
+<br>
+<form>
+  <label for="mes">Elegí un mes</label>
+  <select name="mes" id="mes">
+    <option value="Enero">Enero</option>
+    <option value="Febrero">Febrero</option>
+    <option value="Marzo">Marzo</option>
+    <option value="Abril">Abril</option>
+    <option value="Mayo">Mayo</option>
+    <option value="Junio">Junio</option>
+    <option value="Julio">Julio</option>
+    <option value="Agosto">Agosto</option>
+    <option value="Septiembre">Septiembre</option>
+    <option value="Octubre">Octubre</option>
+    <option value="Noviembre">Noviembre</option>
+    <option value="Diciembre">Diciembre</option>
+   
+  </select>
+  <br>
+      <input type="submit" name="Enviar">
+</form>
+
+<form>
+  <label for="com">Comentario</label>
+    <textarea name="com" id="com" rows="4" cols="30"></textarea>
+    <button type="submit" name="button">Enviar</button>
+    <button type="reset" name="button" >Borrar</button>
+</form>
+
+<a href=""></a>
+
+  </body>
+</html>
