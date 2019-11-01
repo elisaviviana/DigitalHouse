@@ -1,0 +1,35 @@
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.menu{
+	color: black;
+	text-decoration: none;
+}
+#about{
+  background-image: url("../img/emilia-about.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#home{
+	background-image: url("../img/emilia-home.jpg");
+	background-repeat: no-repeat;
+	background-position: right;	
+	background-position: top;
+
+
+}
+
+.Raleway{
+	 font-family: 'Raleway', sans-serif;
+	 text-decoration: none;
+}
+.WorkSans{
+	font-family: 'Work Sans', sans-serif;
+}
+
+h1{
+	 font-family: 'Raleway', sans-serif;
+	 color:grey;
+
+}
