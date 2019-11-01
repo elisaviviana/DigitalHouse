@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Contacto</title>
+    </head>
+    <body id="contacto">
+
+        <header>
+            <h1>Contacto</h1>
+            <a href="carta.html">Volver a la Carta</a>
+        </header>
+
+        <form class="form" action="procesar.php" method="post">
+            <h5>¿De dónde sos?</h5>
+            <select name="pais">
+                <option value="ar">Argentina</option>
+                <option value="br">Brasil</option>
+                <option value="co">Colombia</option>
+            </select>
+
+            <h5>¿Qué te pareció la iluminación?</h5>
+            <p><input type="checkbox" name="iluminacion" value="MuyAcorde" id="muy"> <label for="muy">Muy acorde</label></p>
+            <p><input type="checkbox" name="iluminacion" value="Buena" id="buena"> <label for="buena">Buena, pero podría mejorar</label></p>
+            <p><input type="checkbox" name="iluminacion" value="Mala" id="mala"> <label for="mala">Mala</label></p>
+
+            <h5>¿Qué tipo de plato fue el que más te gustó?</h5>
+            <p><input type="checkbox" name="platoFavorito" value="Entrada" id="entrada"> <label for="entrada">Entrada</label></p>
+            <p><input type="checkbox" name="platoFavorito" value="PlatoPrincipal" id="principal"> <label for="principal">Plato principal</label></p>
+            <p><input type="checkbox" name="platoFavorito" value="Postre" id="postre"> <label for="postre">Postre</label></p>
+            <p><input type="checkbox" name="platoFavorito" value="Otro" id="otro"> <label for="otro">Otro</label></p>
+
+            <h5>¿Recomendarías el lugar?</h5>
+            <p><input type="radio" name="recomiendas" value="Sí" id="si"> <label for="si">Sí</label>
+            <input type="radio" name="recomiendas" value="No" id="no"> <label for="no">No</label>
+            </p>
+
+            <h5>¿Por qué?</h5>
+            <textarea id="por_que" name="por_que"  rows="8" cols="80" placeholder="ingrese un comentario, por favor...."></textarea>
+
+            <h5>Dejanos tus datos y nos pondremos en contacto con vos</h5>
+            <p><label for="nombre">Nombre: </label> <input type="text" name="nombre" id="nombre" placeholder="tu nombre" required></p>
+            <p><label for="email">Email: </label> <input type="email" name="email" id="email" placeholder="tu email" required></p>
+
+            <p>
+              <div class="button">
+              <button class="orangeButton" type="submit" name="button">Enviar</button>
+              <button class="whiteButton" type="reset" name="button">Reiniciar</button>
+              </div>
+            </p>
+        </form>
+        <footer>
+            <img id="logo" src="img\logo-web.png" alt="Logotipo">
+            <strong><p><a href="contacto.html">Contacto</a></p>
+            <p>
+                facebook
+                <br>
+                twitter
+                <br>
+                instagram
+            </p></strong>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,118 @@
+body{
+    background-image: url("../img/bg-2.png");
+    background-repeat: repeat;
+    width: 1140px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #F44336;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+/* HEADER */
+.logo{
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 39px;
+    box-sizing: border-box;
+    margin: 13px;
+    float: left;
+}
+.floatLeft{
+    float: left;
+    text-align: left;
+}
+.categoryMenu{
+    width: 800px;
+}
+nav{
+    text-align: right;
+}
+ul{
+    padding: 2px 0 0 20px;
+}
+ul li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 15px;
+    color: white;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MAIN */
+main{
+    margin-top: 30px;
+    overflow:hidden;
+}
+/* SECTIONS */
+section{
+    float:left;
+}
+section#products{
+    width: 800px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+/* ASIDE (Right Side)*/
+aside{
+    margin-bottom: 20px;
+    width: 320px;
+    float: left;
+    box-sizing: border-box;
+}
+aside h2{
+    background-color: white;
+    font-size: 28px;
+    margin:0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    border: rgb(151, 200, 239) 1px solid;
+}
+
+/* ARTICLES */
+article.product{
+    width: 380px;
+    background-color: white;
+    float:left;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+article.product img{
+    width: 100%;
+}
+article.product h2{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+article.product p{
+    font-size: 14px;
+}
+article.product button{
+    font-size: 14px;
+    color: white;
+    background-color: #F44336;
+    padding: 7px 10px 7px 10px;
+    border-style: none;
+}
+article.rightSide{
+    background-color: white;
+    overflow: hidden;
+    border: rgb(151, 200, 239) 1px solid;
+    padding: 7px 10px;
+}
+article.rightSide img{
+    float: left;
+    margin-right: 10px;
+}
+article.rightSide h4{
+    font-size: 14px;
+    text-align: left;
+}
