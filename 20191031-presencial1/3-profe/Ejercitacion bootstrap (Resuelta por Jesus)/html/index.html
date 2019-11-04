@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- importante! para sitios responsivos -->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Test bootstrap</title>
+    </head>
+    <body>
+
+        <div class="container-fluid azul">
+
+            <!-- HEADER -->
+            <!-- con "align-items-center" alineamos verticalmente. Con "justify-content-between" los separamos horizontalmente-->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-sm-6 col-md-8 col-lg-7 azul">
+                    <h1 id="tituloPrincipal">Freelance Portfolio</h1>
+                </div>
+
+                <!-- menu principal (boton desplegable)-->
+                <!-- "d-lg-none" permite ocultar la columna en el tamaño large -->
+                <div class="col-12 col-sm-3 col-md-3 d-lg-none azul align-self-center"> <!--align-self-center es alineación vertical-->
+                    <div class="dropdown">
+                      <button class="btn btn-success verde uppercase fuenteNormal" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="textButtonMenu">Menu</span>
+                        <i class="fas fa-bars"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Portfolio</button>
+                        <button class="dropdown-item" type="button">About</button>
+                        <button class="dropdown-item" type="button">Contact Me</button>
+                      </div>
+                    </div>
+                    <br>
+                </div>
+
+                <!-- menu principal (nav)-->
+                <!-- "d-lg-block" permite mostrar la columna en el tamaño large -->
+                <div class="d-none d-sm-none d-md-none d-lg-block col-lg-5 azul ">
+                    <ul class="nav justify-content-end">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Me</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END HEADER -->
+
+            <section>
+                <div class="row">
+                    <div class="col-12 verde centrado">
+                        <br><br>
+                        <img src="img/profile.png" id="imgProfile" alt="">
+                        <br><br>
+                        <h2>Freelance Portfolio</h2>
+                        <br>
+                        <i class="fas fa-star mt-4 starlogo"></i>
+                        <br><br>
+                        <p>Web Developer - Graphic artist - User Experience Designer</p>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 col-sm-12 blanco centrado">
+                        <br><br><br><br><br>
+                        <h3>portfolio</h3>
+
+                        <i class="fas fa-star mt-4 starlogo"></i>
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/cabin.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/cake.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/circus.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/game.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/safe.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 blanco centrado">
+                        <img src="img/submarine.png" class="imgSection" alt="">
+                        <br><br>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/14dd9125ec.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
