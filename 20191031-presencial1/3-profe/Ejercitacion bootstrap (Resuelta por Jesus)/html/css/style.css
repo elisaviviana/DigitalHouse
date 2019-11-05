@@ -1,0 +1,131 @@
+/* Mobile First */
+/* Extra Small (xs) */
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.8em;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2em;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 75px;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: gray;
+}
+
+.textButtonMenu{
+    padding-right: 5px;
+}
+.menuicon {
+  font-size: 30px;
+}
+.btn{
+    display: flex;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 60px;
+    align-items: center; /* flexbox alineación vertical */
+}
+
+
+.imgSection{
+    width: 90%;
+}
+.centrado{
+    text-align: center;
+}
+.azul{
+    background-color: #2C3E50;
+    color: white;
+}
+.verde{
+    background-color: #18BC9C;
+    color: white;
+}
+.blanco{
+    background-color: white;
+    color: #2C3E50;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.fuenteNormal{
+    font-family: 'Lato', sans-serif;
+}
+.fuenteTitulos{
+    font-family: 'Montserrat', sans-serif;
+}
+.starlogo{
+    font-size: 3em;
+}
+#imgProfile{
+     width:200px;
+}
+#tituloPrincipal{
+    padding-top: 20px;
+}
+
+/* Small (sm) */
+@media (min-width: 576px) {
+    h2{
+        font-size: 4em;
+    }
+    h3{
+        font-size: 3em;
+    }
+    p{
+        font-size: 1.8em;
+    }
+    #imgProfile{
+         width:400px;
+    }
+    .dropdown{
+        height: 25px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+/* Medium (md) */
+@media (min-width: 768px) {
+    .dropdown{
+        height: 35px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #tituloPrincipal{
+        margin-bottom: 20px;
+    }
+}
+/* Large (lg)*/
+@media (min-width: 992px) {
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1200px) {
+}

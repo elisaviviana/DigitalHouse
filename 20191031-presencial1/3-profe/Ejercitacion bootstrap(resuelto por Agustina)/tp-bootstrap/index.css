@@ -1,0 +1,33 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar.navbar-expand-lg{
+    background-color:#2C3E50;
+}
+a.navbar-brand{
+    color: white;
+}
+a.nav-link{
+    color: white;
+}
+button.navbar-toggler{
+   background-color: #18BC9C;
+}
+a.menu{
+    color: white!important;
+}
+.navbar-toggler .navbar-toggler-icon{
+color: white;
+}
+.profile{
+    color: white;
+    background-color:#18BC9C ;
+}
+i.fas.fa-star{
+    font-size: 30px;
+}
+
+section.about{
+background-color: #18BC9C;
+color: white;
+}
