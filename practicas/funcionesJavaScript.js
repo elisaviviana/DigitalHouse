@@ -44,3 +44,14 @@ function saludar1(){
 }
 console.log(mensaje1);
 console.log(saludar1());
+/////////////
+function noParesDeContarImparesHasta(numero){
+    let impar =0;
+    for(let v = 0; v <= numero; v++){
+        if(v % 2 != 0){
+            impar = impar +1;
+        }
+    }
+return impar;
+}
+console.log(noParesDeContarImparesHasta(65));
