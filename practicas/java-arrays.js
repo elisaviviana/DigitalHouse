@@ -11,6 +11,19 @@ var canciones = [
   }
 ]
 
+
 var titulos = canciones.map(function (elemento) {
-  return elemento = canciones.nombre;
+  return elemento.nombre;
 })
+console.log(titulos);
+
+var lasMejores = canciones.filter(function(elemento){
+        return elemento.puntaje > 8;
+})
+
+console.log(lasMejores);
+
+var reina = canciones.find(function(elemento){
+  return elemento.nombre ==='La reina batata'
+})
+console.log(reina);

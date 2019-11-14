@@ -31,3 +31,13 @@ var mibody = document.querySelector("body")
     var miiframe = document.querySelector("iframe")
 
     miiframe.setAttribute('src','https://www.youtube.com/embed/'+idVideo)
+
+
+
+    window.addEventListener("load", function() {
+    var peliculas = prompt("Por favor, ingresar las peliculas favoritas separadas por coma")  ;
+      var arrayPeli = peliculas.split(",");
+
+
+
+    })
