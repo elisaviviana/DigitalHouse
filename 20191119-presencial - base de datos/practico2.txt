@@ -1,0 +1,11 @@
+Práctica 2 (Ejercicio Integrador 1)
+
+
+En relación a la base de datos proporcionada, necesitamos realizar tres informes. Realizá las consultas adecuadas para obtener los datos necesarios. Utilizaremos SELECT … FROM … WHERE
+
+Obtener las películas (movies) y sus géneros (genres), ordenado por nombre de pelicula (usar title).
+SELECT movies.title, genres.name from movies, genres where movies.genre_id = genres.id order by movies.title
+
+Obtener las películas (movies) con sus actores (actors), ordenar por nombre de pelicula y nombre de los actores (usar title y first_name).
+select movies.title, actors.first_name from movies, actors, actor_movie
+where actor_movie.actor_id = actors.id and actor_movie.movie_id = movies.id order by movies.title , actors.first_name
