@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Validación de Formulario mediante JS</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <h1>Formulario de contacto</h1>
+      <section class="resultadoValidacion">
+         <h4>Por favor, corrija los siguientes errores:</h4>
+         <ul>
+            <li>Ejemplo de cómo se mostraría un error.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+         </ul>
+      </section>
+      <form class="" action="#" method="post">
+         <p>*<label for="nombre">Nombre y Apellido: </label><br>
+         <input type="text" name="nombre" id="nombre" value="" required></p>
+
+         <p>
+           <label for="pais">* País:</label><br>
+           <select class="" name="pais" id="pais" required>
+             <!-- los options serán insertados con js -->
+           </select>
+         </p>
+
+         <p>*<label for="email">Email: </label><br>
+         <input type="email" name="email" id="email" value="" required></p>
+
+         <p><label for="empresa">Empresa: </label><br>
+         <input type="text" name="empresa" id="empresa" value=""></p>
+
+         <p><label for="asunto">* Asunto: </label><br>
+         <select class="" name="asunto" id="asunto">
+            <option value="cap">Caja de ahorro en pesos</option>
+            <option value="cad">Caja de ahorro en dólares</option>
+            <option value="cc">Cuenta corriente</option>
+            <option value="tranf">Transferencias</option>
+            <option value="otro">Otro</option>
+         </select> <br>
+         <input type="text" name="otroAsunto" id="otroAsunto" value="" placeholder="Escriba aquí su asunto"></p>
+
+         <p><label for="detalle">* Detalle: </label> <br>
+            <textarea name="detalle" id="detalle" rows="8" cols="80" required></textarea>
+         </p>
+         <p>
+           <button type="submit" name="button">
+             Enviar
+           </button>
+           <button type="reset" name="button">
+             Reiniciar
+           </button>
+         </p>
+      </form>
+
+
+      <script src="validacionFormulario.js" charset="utf-8"></script>
+   </body>
+</html>

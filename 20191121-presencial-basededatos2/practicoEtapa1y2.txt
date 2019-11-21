@@ -103,9 +103,15 @@ select series.title as Serie, COUNT(episodes.id)
 from series
 INNER JOIN seasons ON seasons.serie_id = series.id
 INNER join episodes on episodes.season_id = seasons.id
-where episodes.release_date like '2016*'
+where episodes.release_date like '2016%'
 group by series.id
 
 
 
 4- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el año actual (usar release_date).
+select series.title as Serie, COUNT(episodes.id), current_date
+from series
+INNER JOIN seasons ON seasons.serie_id = series.id
+INNER join episodes on episodes.season_id = seasons.id
+where date_format(episodes.release_date,'%YY') = date_format(current_date,'%YY')
+group by series.id
