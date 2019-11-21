@@ -1,0 +1,111 @@
+Práctica (Integradora)
+
+
+En relación a la base de datos proporcionada, realizar estos ejercicios.
+Utilizaremos estos temas ya vistos:
+Consultas avanzadas: JOINs | DISTINCT |  Funciones MySQL | Funciones de Agregación | GROUP BY | HAVING
+
+
+Nos contactan desde DigitalFlix para realizar distintos informes enfocados en su catálogo, con el objetivo de realizar un análisis de mercado y proyectar futuras adquisiciones y despliegue en su público específico. Tomaremos como origen su propia base de datos, a la que nos dan acceso.
+
+
+Deberemos enviarles el código SQL necesario para que ellos puedan realizar las consultas también en el futuro.
+
+Como equipo tomamos la decisión de realizar las pruebas en WorkBench, para chequear contra la base de datos, si los resultados obtenidos con cada consulta son los esperados.
+
+
+PRIMERA ETAPA
+
+
+En este primera etapa, solicitan:
+
+
+1- Mostrar los géneros de las películas (genres), ordenados de mayor a menor por su nombre, con referencia a las películas (movies) utilizando joins.
+Solicitan que el informe muestre: name y title.
+
+select genres.name, movies.title from genres inner JOIN movies on movies.genre_id = genres.id order by genres.name DESC
+
+
+2- Mostrar las películas (movies) con sus géneros (genres) y los actores (actors) que participen en cada una de ellas utilizando joins.
+Solicitan que el informe muestre: title, name, first_name y last_name.
+
+select movies.title, genres.name, actors.first_name, actors.last_name
+from genres
+inner JOIN movies on movies.genre_id = genres.id
+inner JOIN actor_movie on actor_movie.movie_id = movies.id
+inner join actors on actors.id = actor_movie.actor_id
+order by movies.title
+
+
+3- Mostrar los actores (actors) y las películas (movies) en las que participaron. Ordenar por nombre de actor.
+Mostrar: first_name y title.
+select actors.first_name, movies.title
+from movies
+inner JOIN actor_movie on actor_movie.movie_id = movies.id
+inner JOIN actors on actors.id = actor_movie.actor_id
+order by actors.first_name
+
+
+4- Mostrar las películas (movies) con sus géneros (genres) si los posee y los géneros con todas las películas que le corresponden, ambas en una sola consulta, sin ordenamiento.
+Mostrar: title y name.
+select movies.title, COALESCE(genres.name,"")
+from movies
+left join genres on genres.id =  movies.genre_id
+
+
+5- Mostrar también este informe utilizando un ordenamiento por título de la película (title), y por nombre del género (name).
+Luego viceversa, por nombre del género (name) y por título de película (title).
+select movies.title, COALESCE(genres.name,"")
+from movies
+left join genres on genres.id =  movies.genre_id
+order by movies.title, genres.name
+
+select movies.title, COALESCE(genres.name,"")
+from movies
+left join genres on genres.id =  movies.genre_id
+order by  genres.name, movies.title
+
+
+
+
+SEGUNDA ETAPA
+
+
+En este segunda etapa, solicitan:
+
+
+1- Mostrar por cada capítulo (episodes) el número de temporada (seasons),
+el nombre de la serie (series),
+el género (genres)
+y la cantidad de actores (actors) que tiene.
+
+SELECT episodes.title, seasons.title as season, series.title as series, genres.name as genero, count(actors.id) FROM `episodes`
+left join seasons on seasons.id = episodes.season_id
+left join series on series.id = seasons.serie_id
+left join genres on genres.id = series.genre_id
+left join actor_episode on actor_episode.episode_id = episodes.id
+left join actors on actors.id = actor_episode.actor_id
+group by episodes.id
+
+
+2- Mostrar todos los géneros (genres) y el promedio de rating (rating) de sus películas (movies). Considerar solamente las películas con rating mayor a 5.
+
+select genres.name as genero, AVG(movies.rating)
+from movies
+inner join genres on genres.id = movies.genre_id
+where movies.rating > 5
+group by genres.id
+
+
+3- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el 2016 (usar release_date).
+
+select series.title as Serie, COUNT(episodes.id)
+from series
+INNER JOIN seasons ON seasons.serie_id = series.id
+INNER join episodes on episodes.season_id = seasons.id
+where episodes.release_date like '2016*'
+group by series.id
+
+
+
+4- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el año actual (usar release_date).
