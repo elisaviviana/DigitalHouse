@@ -74,7 +74,8 @@ SEGUNDA ETAPA
 En este segunda etapa, solicitan:
 
 
-1- Mostrar por cada capítulo (episodes) el número de temporada (seasons),
+1- Mostrar por cada capítulo (episodes)
+el número de temporada (seasons),
 el nombre de la serie (series),
 el género (genres)
 y la cantidad de actores (actors) que tiene.
@@ -109,7 +110,7 @@ group by series.id
 
 
 4- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el año actual (usar release_date).
-select series.title as Serie, COUNT(episodes.id), current_date
+select series.title as Serie, COUNT(episodes.id), date_format(current_date,'%YY%m%D')
 from series
 INNER JOIN seasons ON seasons.serie_id = series.id
 INNER join episodes on episodes.season_id = seasons.id
