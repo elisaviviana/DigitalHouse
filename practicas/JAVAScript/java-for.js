@@ -22,3 +22,13 @@ function noParesDeContarImparesHasta(numero){
     }
 console.log(impar);
 }
+console.log(noParesDeContarImparesHastaarray(50));
+function noParesDeContarImparesHastaarray(numero){
+    let array =[];
+    for(let v = 0; v <= numero; v++){
+        if(v % 2 != 0){
+            array.push(v);
+        }
+    }
+return array;
+}
