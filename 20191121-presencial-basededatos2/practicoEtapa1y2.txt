@@ -23,7 +23,10 @@ En este primera etapa, solicitan:
 1- Mostrar los géneros de las películas (genres), ordenados de mayor a menor por su nombre, con referencia a las películas (movies) utilizando joins.
 Solicitan que el informe muestre: name y title.
 
-select genres.name, movies.title from genres inner JOIN movies on movies.genre_id = genres.id order by genres.name DESC
+select genres.name, movies.title
+from genres
+inner JOIN movies on movies.genre_id = genres.id
+order by genres.name DESC
 
 
 2- Mostrar las películas (movies) con sus géneros (genres) y los actores (actors) que participen en cada una de ellas utilizando joins.
@@ -33,7 +36,7 @@ select movies.title, genres.name, actors.first_name, actors.last_name
 from genres
 inner JOIN movies on movies.genre_id = genres.id
 inner JOIN actor_movie on actor_movie.movie_id = movies.id
-inner join actors on actors.id = actor_movie.actor_id
+inner JOIN actors on actors.id = actor_movie.actor_id
 order by movies.title
 
 
@@ -50,19 +53,19 @@ order by actors.first_name
 Mostrar: title y name.
 select movies.title, COALESCE(genres.name,"")
 from movies
-left join genres on genres.id =  movies.genre_id
+left JOIN genres on genres.id =  movies.genre_id
 
 
 5- Mostrar también este informe utilizando un ordenamiento por título de la película (title), y por nombre del género (name).
 Luego viceversa, por nombre del género (name) y por título de película (title).
 select movies.title, COALESCE(genres.name,"")
 from movies
-left join genres on genres.id =  movies.genre_id
+left JOIN genres on genres.id =  movies.genre_id
 order by movies.title, genres.name
 
 select movies.title, COALESCE(genres.name,"")
 from movies
-left join genres on genres.id =  movies.genre_id
+left JOIN genres on genres.id =  movies.genre_id
 order by  genres.name, movies.title
 
 
@@ -74,45 +77,50 @@ SEGUNDA ETAPA
 En este segunda etapa, solicitan:
 
 
-1- Mostrar por cada capítulo (episodes)
-el número de temporada (seasons),
-el nombre de la serie (series),
-el género (genres)
-y la cantidad de actores (actors) que tiene.
+1- Mostrar por cada capítulo (episodes),el número de temporada (seasons),el nombre de la serie (series),el género (genres) y la cantidad de actores (actors) que tiene.
 
-SELECT episodes.title, seasons.title as season, series.title as series, genres.name as genero, count(actors.id) FROM `episodes`
-left join seasons on seasons.id = episodes.season_id
-left join series on series.id = seasons.serie_id
-left join genres on genres.id = series.genre_id
-left join actor_episode on actor_episode.episode_id = episodes.id
-left join actors on actors.id = actor_episode.actor_id
+SELECT  series.title as Serie
+, episodes.title as Episodio
+, seasons.title as Temporada
+, genres.name as genero
+, count(actors.id) as cantActores
+FROM `episodes`
+left JOIN seasons on seasons.id = episodes.season_id
+left JOIN series on series.id = seasons.serie_id
+left JOIN genres on genres.id = series.genre_id
+left JOIN actor_episode on actor_episode.episode_id = episodes.id
+left JOIN actors on actors.id = actor_episode.actor_id
 group by episodes.id
+order by series.title, seasons.number
 
 
 2- Mostrar todos los géneros (genres) y el promedio de rating (rating) de sus películas (movies). Considerar solamente las películas con rating mayor a 5.
 
-select genres.name as genero, AVG(movies.rating)
+select genres.name as genero, AVG(movies.rating) as avgRating
 from movies
-inner join genres on genres.id = movies.genre_id
+inner JOIN genres on genres.id = movies.genre_id
 where movies.rating > 5
 group by genres.id
 
 
 3- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el 2016 (usar release_date).
 
-select series.title as Serie, COUNT(episodes.id)
+select series.title as Serie, COUNT(episodes.id) as cantCapitulos
 from series
 INNER JOIN seasons ON seasons.serie_id = series.id
-INNER join episodes on episodes.season_id = seasons.id
+INNER JOIN episodes on episodes.season_id = seasons.id
 where episodes.release_date like '2016%'
 group by series.id
 
 
-
 4- Mostrar todas las series (series) y la cantidad de capítulos (episodes) que se emitieron en el año actual (usar release_date).
-select series.title as Serie, COUNT(episodes.id), date_format(current_date,'%YY%m%D')
+
+select series.title as Serie, COUNT(episodes.id) as cantCapitulos, date_format(current_date,'%Y') as añoActual
 from series
 INNER JOIN seasons ON seasons.serie_id = series.id
-INNER join episodes on episodes.season_id = seasons.id
-where date_format(episodes.release_date,'%YY') = date_format(current_date,'%YY')
+INNER JOIN episodes on episodes.season_id = seasons.id
+where date_format(episodes.release_date,'%Y') = date_format(current_date,'%Y')
 group by series.id
+
+//No trae información porque en la base de datos no hay nada del año 2019
+//Si insertamos datos en la tabla episodes con release_date del 2019 empieza a traer info
